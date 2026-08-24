@@ -1,0 +1,14 @@
+demo_dbt:
+  outputs:
+    dev:
+      type: duckdb
+      # path: dev.duckdb
+      path: '..\data\yc_parking_violations.db'
+      threads: 1
+
+    prod:
+      type: duckdb
+      path: prod.duckdb
+      threads: 4
+
+  target: dev
